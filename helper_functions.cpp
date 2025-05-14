@@ -16,7 +16,8 @@ extern bool showTooltip ;
 extern bool isSoundEnabled;
 
 
-void drawGearTooltip() {
+void drawGearTooltip()
+{
     if (hoveredGear == -1 || !showTooltip) return; // Thêm ?i?u ki?n !showTooltip
 
     const char* gearNames[] = {"Gear 1", "Gear 2", "Gear 3", "Gear 4"};
@@ -39,15 +40,18 @@ void drawGearTooltip() {
     float tooltipWidth = 100;
     float tooltipHeight = 30;
 
-    if (x + tooltipWidth > WIDTH) {
+    if (x + tooltipWidth > WIDTH)
+    {
         x = WIDTH - tooltipWidth;
     }
-    if (y + tooltipHeight > HEIGHT) {
+
+    if (y + tooltipHeight > HEIGHT)
+    {
         y = HEIGHT - tooltipHeight;
     }
 
     // N?n tooltip
-    glColor4f(0.3, 0.1f, 0.65f, 0.8f);
+    glColor4f(0.3, 0.1, 0.65, 0.8);
     glBegin(GL_QUADS);
     glVertex2f(x, y);
     glVertex2f(x + tooltipWidth, y);
@@ -56,8 +60,8 @@ void drawGearTooltip() {
     glEnd();
 
     // Vi?n tooltip
-    glColor3f(0.5f, 0.5f, 0.5f);
-    glLineWidth(1.0f);
+    glColor3f(0.5, 0.5, 0.5);
+    glLineWidth(1.0);
     glBegin(GL_LINE_LOOP);
     glVertex2f(x, y);
     glVertex2f(x + tooltipWidth, y);
@@ -66,9 +70,11 @@ void drawGearTooltip() {
     glEnd();
 
     // Ch?
-    glColor3f(1.0f, 1.0f, 1.0f);
+    glColor3f(1.0, 1.0, 1.0);
     glRasterPos2f(x + 30, y + 20);
-    for (const char* c = gearNames[hoveredGear]; *c != '\0'; c++) {
+
+    for (const char* c = gearNames[hoveredGear]; *c != '\0'; c++)
+    {
         glutBitmapCharacter(GLUT_BITMAP_HELVETICA_12, *c);
     }
 
@@ -79,7 +85,8 @@ void drawGearTooltip() {
     glPopMatrix();
 }
 
-float lerp(float a, float b, float f) {
+float lerp(float a, float b, float f)
+{
     return a + f * (b - a);
 }
 

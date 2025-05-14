@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1747215465 source:d:\fpt\documents\projiect\bai_tap_lon\drawing_functions.cpp
+	"gear_rack_simulator.h"
+
+1747212434 d:\fpt\documents\projiect\bai_tap_lon\gear_rack_simulator.h
+	<GL/glut.h>
+	<GL/gl.h>
+	<cmath>
+	<vector>
+	<cstdio>
+	<string>
+	<cstring>
+	<windows.h>
+	<mmsystem.h>
+
+1747219937 source:d:\fpt\documents\projiect\bai_tap_lon\gear_rack_simulator.cpp
+	"gear_rack_simulator.h"
+
+1747212384 source:d:\fpt\documents\projiect\bai_tap_lon\helper_functions.cpp
+	"gear_rack_simulator.h"
+
+1747212971 source:d:\fpt\documents\projiect\bai_tap_lon\simulation_functions.cpp
+	"gear_rack_simulator.h"
+
+1747217421 source:d:\fpt\documents\projiect\bai_tap_lon\ui_functions.cpp
+	"gear_rack_simulator.h"
+

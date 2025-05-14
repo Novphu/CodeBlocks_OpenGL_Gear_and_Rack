@@ -12,18 +12,19 @@
 #include <mmsystem.h>
 
 // Constants
-const float PI = 3.14159265f;
+const float PI = 3.14159265;
 const int MIN_RACK_TEETH = 45;
 const int MAX_RACK_TEETH = 65;
-const float DEFAULT_ROTATION_SPEED = 4.0f;
-const float SPEED_LERP_FACTOR = 0.05f;
-const float MAX_DEPRESS = 5.0f;
-const float MAX_POWER_DEPRESS = 3.0f;
-const float MAX_SOUND_DEPRESS = 3.0f;
-const float bevelAmount = 0.02f;
+const float DEFAULT_ROTATION_SPEED = 4.0;
+const float SPEED_LERP_FACTOR = 0.05;
+const float MAX_DEPRESS = 5.0;
+const float MAX_POWER_DEPRESS = 3.0;
+const float MAX_SOUND_DEPRESS = 3.0;
+const float bevelAmount = 0.02;
 
 // Structs
-struct GearProperties {
+struct GearProperties
+{
     int numTeeth;
     float innerRadius;
     float outerRadius;
@@ -32,7 +33,8 @@ struct GearProperties {
     float thickness;
 };
 
-struct RackProperties {
+struct RackProperties
+{
     float length;
     float toothWidthBase;
     float toothWidthTop;
@@ -42,7 +44,8 @@ struct RackProperties {
     float bevelSize;
 };
 
-struct GearPosition {
+struct GearPosition
+{
     float x, y, z;
     float radius;
     int id;
